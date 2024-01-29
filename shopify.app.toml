@@ -1,0 +1,27 @@
+# Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
+
+client_id = "900a2c65e0091f5d247a4da1fd14d439"
+name = "Custom Discount App"
+application_url = "https://api-student-ministry-guy.trycloudflare.com"
+embedded = true
+
+[build]
+automatically_update_urls_on_dev = true
+dev_store_url = "michaels-test-store-2024.myshopify.com"
+
+[access_scopes]
+# Learn more at https://shopify.dev/docs/apps/tools/cli/configuration#access_scopes
+scopes = "write_products, write_discounts"
+
+[auth]
+redirect_urls = [
+  "https://api-student-ministry-guy.trycloudflare.com/auth/callback",
+  "https://api-student-ministry-guy.trycloudflare.com/auth/shopify/callback",
+  "https://api-student-ministry-guy.trycloudflare.com/api/auth/callback"
+]
+
+[webhooks]
+api_version = "2024-01"
+
+[pos]
+embedded = false
